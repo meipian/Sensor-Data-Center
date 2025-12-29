@@ -8,16 +8,19 @@
 
 ---
 
+### 项目特点
+
+1. 提供独立的测试程序`sender.py`
+2. 支持**网络性能分析**
+
 ### 快速导航
 
 * [1. 项目架构说明](#项目架构说明)
-* [2. 快速上手 (Windows)](#快速上手指南-windows)
+* [2. 快速上手 (Windows)](#快速上手-windows)
 
 ---
 
 ## 项目架构说明
-
-本项目遵循经典的 **三层解耦架构**，确保了数据流向的确定性与可维护性：
 
 * **接入层 (Access Layer)**：利用 FastAPI 异步框架处理并发请求。通过 Pydantic 模块进行强类型校验，拒绝格式异常的非理性数据。
 * **持久层 (Persistence Layer)**：采用 SQLAlchemy ORM 框架，底层使用 SQLite 数据库。通过 `SessionLocal` 管理数据库事务，确保数据一致性。
@@ -25,24 +28,29 @@
 
 ---
 
-## 快速上手指南 (Windows)
+## 快速上手 (Windows)
 
 ### 1. 环境准备
 
-确保系统已安装 **Python 3.12+**：
+确保您的系统已安装 **Python 3.12+**：
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn app:app --reload --host 127.0.0.1 --port 8000
+```
+
+以 1s 为间隔发送模拟采集数据：
+
+```powershell
 python sender.py
 ```
 
-### 5. 访问端点
+### 2. 访问端点
 
 * **数据视图**: 请访问 `http://127.0.0.1:8000/view`
-* **网络性能分析**: 请访问 `http://127.0.0.1:8000/analeze` 
+* **网络性能分析**: 请访问 `http://127.0.0.1:8000/analyze` 
 
 ---
 
