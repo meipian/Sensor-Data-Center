@@ -34,7 +34,7 @@
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\activate
-pip install fastapi sqlalchemy uvicorn pydantic -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install -r requirements.txt
 uvicorn app:app --reload --host 127.0.0.1 --port 8000
 python sender.py
 ```
