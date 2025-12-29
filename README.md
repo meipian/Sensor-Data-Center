@@ -10,8 +10,8 @@
 
 ### 快速导航
 
-1. [项目架构说明](https://www.google.com/search?q=%23%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84%E8%AF%B4%E6%98%8E)
-2. [快速上手指南 (Windows)](https://www.google.com/search?q=%23%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97-windows)
+* [1. 项目架构说明](#项目架构说明)
+* [2. 快速上手 (Windows)](#快速上手指南-windows)
 
 ---
 
